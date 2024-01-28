@@ -1,0 +1,11 @@
+services:
+  api:
+    container_name: "hadoop"
+    volumes:
+      - ./main:/root/main
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 9000:9000
+    stdin_open: true
